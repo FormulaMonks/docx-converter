@@ -78,9 +78,29 @@
 				</tc>
 			</tr>
 		</tbl>
-		<p w14:paraId="0DC6722E" w14:textId="73C6022E" w:rsidR="00E1214E" w:rsidRDefault="00E1214E" w:rsidP="00FC5619" />
-		<p w14:paraId="0E4EA729" w14:textId="77777777" w:rsidR="00585340" w:rsidRDefault="00585340" w:rsidP="00FC5619" />
-		<sectPr w:rsidR="00585340" w:rsidSect="00E5535F">
+		<p w14:paraId="0E4EA729" w14:textId="6AAE51DD" w:rsidR="00585340" w:rsidRDefault="00585340" w:rsidP="00FC5619">
+			<pPr>
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+			</pPr>
+		</p>
+		<p w14:paraId="3C8778D5" w14:textId="12D3D433" w:rsidR="00E67738" w:rsidRPr="00E67738" w:rsidRDefault="00E67738" w:rsidP="00FC5619">
+			<pPr>
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+			</pPr>
+			<r>
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+				<t>
+					What about now?
+				</t>
+			</r>
+		</p>
+		<sectPr w:rsidR="00E67738" w:rsidRPr="00E67738" w:rsidSect="00E5535F">
 			<pgSz w:w="11900" w:h="16840" />
 			<pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0" />
 			<cols w:space="708" />
