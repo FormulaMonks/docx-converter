@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink" xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 w16se w16cid w16 w16cex wp14">
+	<body>
+		<p w14:paraId="5FEFD4AF" w14:textId="6B751AE1" w:rsidR="00F052B9" w:rsidRDefault="00512371" w:rsidP="00512371">
+			<pPr>
+				<pStyle w:val="Heading1" />
+				<rPr>
+					<color w:val="385623" w:themeColor="accent6" w:themeShade="80" />
+					<lang w:val="en-US" />
+				</rPr>
+			</pPr>
+			<r w:rsidRPr="00512371">
+				<rPr>
+					<color w:val="385623" w:themeColor="accent6" w:themeShade="80" />
+					<lang w:val="en-US" />
+				</rPr>
+				<t>
+					This is my beautiful, main, header
+				</t>
+			</r>
+		</p>
+		<p w14:paraId="06950B13" w14:textId="20184FA1" w:rsidR="00512371" w:rsidRPr="00512371" w:rsidRDefault="00512371" w:rsidP="00512371">
+			<pPr>
+				<rPr>
+					<lang w:val="en-US" />
+				</rPr>
+			</pPr>
+			<r w:rsidRPr="00512371">
+				<rPr>
+					<lang w:val="en-US" />
+				</rPr>
+				<t xml:space="preserve">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				</t>
+			</r>
+			<r w:rsidRPr="00512371">
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+				<t xml:space="preserve">
+					Vivamus semper ullamcorper dui eget ultrices.
+				</t>
+			</r>
+			<r w:rsidRPr="002324AD">
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+				<t xml:space="preserve">
+					Donec sodales pretium fermentum. Vestibulum vulputate pretium lacus, in sagittis leo. Quisque odio
+				</t>
+			</r>
+			<proofErr w:type="gramStart" />
+			<r w:rsidRPr="002324AD">
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+				<t>
+					sem, molestie
+				</t>
+			</r>
+			<proofErr w:type="gramEnd" />
+			<r w:rsidRPr="002324AD">
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+				<t xml:space="preserve">
+					id ullamcorper in, molestie quis metus.
+				</t>
+			</r>
+			<r w:rsidRPr="00512371">
+				<rPr>
+					<lang w:val="en-US" />
+				</rPr>
+				<t xml:space="preserve">
+					Proin sed orci at magna commodo ornare sed vitae metus.
+				</t>
+			</r>
+			<r w:rsidRPr="002324AD">
+				<rPr>
+					<lang w:val="pt-BR" />
+				</rPr>
+				<t xml:space="preserve">
+					Suspendisse venenatis, elit vel ullamcorper dictum, turpis lacus varius nunc, vitae placerat leo dui venenatis dui.
+				</t>
+			</r>
+			<r w:rsidRPr="00512371">
+				<rPr>
+					<lang w:val="en-US" />
+				</rPr>
+				<t>
+					Donec fringilla arcu at velit hendrerit vehicula.
+				</t>
+			</r>
+		</p>
+		<sectPr w:rsidR="00512371" w:rsidRPr="00512371" w:rsidSect="00E5535F">
+			<pgSz w:w="11900" w:h="16840" />
+			<pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0" />
+			<cols w:space="708" />
+			<docGrid w:linePitch="360" />
+		</sectPr>
+	</body>
+</document>

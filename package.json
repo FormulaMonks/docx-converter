@@ -1,0 +1,15 @@
+{
+  "name": "docx-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "unzip": "node src/unzip-docx.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "unzipper": "^0.10.11"
+  }
+}
