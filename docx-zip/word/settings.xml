@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <settings xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main" mc:Ignorable="w14 w15 w16se w16cid w16 w16cex">
 	<zoom w:percent="170" />
+	<proofState w:spelling="clean" w:grammar="clean" />
 	<defaultTabStop w:val="720" />
 	<characterSpacingControl w:val="doNotCompress" />
 	<compat>
@@ -12,16 +13,10 @@
 		<compatSetting w:name="useWord2013TrackBottomHyphenation" w:uri="http://schemas.microsoft.com/office/word" w:val="0" />
 	</compat>
 	<rsids>
-		<rsidRoot w:val="00F052B9" />
-		<rsid w:val="002324AD" />
-		<rsid w:val="002A0AE3" />
-		<rsid w:val="00512371" />
+		<rsidRoot w:val="00FC5619" />
 		<rsid w:val="0074698F" />
-		<rsid w:val="00797EBC" />
-		<rsid w:val="00C549EA" />
-		<rsid w:val="00C637D1" />
 		<rsid w:val="00E5535F" />
-		<rsid w:val="00F052B9" />
+		<rsid w:val="00FC5619" />
 	</rsids>
 	<mathPr>
 		<mathFont m:val="Cambria Math" />
@@ -40,7 +35,7 @@
 	<clrSchemeMapping w:bg1="light1" w:t1="dark1" w:bg2="light2" w:t2="dark2" w:accent1="accent1" w:accent2="accent2" w:accent3="accent3" w:accent4="accent4" w:accent5="accent5" w:accent6="accent6" w:hyperlink="hyperlink" w:followedHyperlink="followedHyperlink" />
 	<decimalSymbol w:val="," />
 	<listSeparator w:val="," />
-	<docId w14:val="068DE0F9" />
+	<docId w14:val="2A31F2D9" />
 	<chartTrackingRefBased />
-	<docId w15:val="{E3099978-B189-DE45-9B35-3E2A934DF508}" />
+	<docId w15:val="{9CE5D160-D56F-384B-881D-8E2BAB0B09F5}" />
 </settings>
