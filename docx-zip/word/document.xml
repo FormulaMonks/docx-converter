@@ -33,8 +33,22 @@
 		</p>
 		<p w14:paraId="62EB96E0" w14:textId="77777777" w:rsidR="00FC5619" w:rsidRDefault="00FC5619" w:rsidP="00FC5619">
 			<r>
+				<t xml:space="preserve">
+					Essentially, published
+				</t>
+			</r>
+			<r w:rsidRPr="00FD42F4">
+				<rPr>
+					<b />
+					<bCs />
+				</rPr>
 				<t>
-					Essentially, published log messages are going to be broadcast to all the receivers.
+					log messages
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+					are going to be broadcast to all the receivers.
 				</t>
 			</r>
 		</p>

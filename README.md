@@ -8,7 +8,7 @@
 - `<t>`: the text inside an `<r>`
 - `<b />` & `<bCs />`: both were added when I set some text to be bold
 - `<proofErr>`: warnings about grammar issues and similar
-- `<t xml:space="preserve">` looks like the primitive used to keep spaces around
+- `<t xml:space="preserve">`: part of the XML spec that defines that spaces around the content must be preserved (not trimmed)
 
 ### settings.xml
 
