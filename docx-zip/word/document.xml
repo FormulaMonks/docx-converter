@@ -19,7 +19,7 @@
 				</t>
 			</r>
 		</p>
-		<p w14:paraId="06950B13" w14:textId="20184FA1" w:rsidR="00512371" w:rsidRPr="00512371" w:rsidRDefault="00512371" w:rsidP="00512371">
+		<p w14:paraId="2069E6B2" w14:textId="77777777" w:rsidR="00C637D1" w:rsidRDefault="00512371" w:rsidP="00512371">
 			<pPr>
 				<rPr>
 					<lang w:val="en-US" />
@@ -56,35 +56,24 @@
 					<lang w:val="pt-BR" />
 				</rPr>
 				<t xml:space="preserve">
-					. Vestibulum vulputate pretium lacus, in sagittis leo. Quisque odio
-				</t>
-			</r>
-			<proofErr w:type="gramStart" />
-			<r w:rsidRPr="002324AD">
-				<rPr>
-					<lang w:val="pt-BR" />
-				</rPr>
-				<t>
-					sem, molestie
-				</t>
-			</r>
-			<proofErr w:type="gramEnd" />
-			<r w:rsidRPr="002324AD">
-				<rPr>
-					<lang w:val="pt-BR" />
-				</rPr>
-				<t xml:space="preserve">
-					id ullamcorper in, molestie quis metus.
+					. Vestibulum vulputate pretium lacus, in sagittis leo. Quisque odio sem, molestie id ullamcorper in, molestie quis metus.
 				</t>
 			</r>
 			<r w:rsidRPr="00512371">
 				<rPr>
 					<lang w:val="en-US" />
 				</rPr>
-				<t xml:space="preserve">
+				<t>
 					Proin sed orci at magna commodo ornare sed vitae metus.
 				</t>
 			</r>
+		</p>
+		<p w14:paraId="06950B13" w14:textId="1B22C846" w:rsidR="00512371" w:rsidRPr="00512371" w:rsidRDefault="00512371" w:rsidP="00512371">
+			<pPr>
+				<rPr>
+					<lang w:val="en-US" />
+				</rPr>
+			</pPr>
 			<r w:rsidRPr="002324AD">
 				<rPr>
 					<lang w:val="pt-BR" />
