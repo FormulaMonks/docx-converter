@@ -41,12 +41,22 @@
 					Vivamus semper ullamcorper dui eget ultrices.
 				</t>
 			</r>
+			<r w:rsidRPr="002A0AE3">
+				<rPr>
+					<b />
+					<bCs />
+					<lang w:val="pt-BR" />
+				</rPr>
+				<t>
+					Donec sodales pretium fermentum
+				</t>
+			</r>
 			<r w:rsidRPr="002324AD">
 				<rPr>
 					<lang w:val="pt-BR" />
 				</rPr>
 				<t xml:space="preserve">
-					Donec sodales pretium fermentum. Vestibulum vulputate pretium lacus, in sagittis leo. Quisque odio
+					. Vestibulum vulputate pretium lacus, in sagittis leo. Quisque odio
 				</t>
 			</r>
 			<proofErr w:type="gramStart" />
