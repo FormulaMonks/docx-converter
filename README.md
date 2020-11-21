@@ -13,6 +13,7 @@
 ### settings.xml
 
 - `<proofState>`: holds things like current state of grammar and spelling
+- `<rsids>`: holds the ids of the ... I added a new paragraph, then its id was added as a `<rsid>` element to this one
 
 ### Random Notes
 
