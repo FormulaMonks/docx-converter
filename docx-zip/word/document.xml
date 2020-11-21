@@ -53,8 +53,34 @@
 			</r>
 		</p>
 		<p w14:paraId="6312CA66" w14:textId="46D252FC" w:rsidR="00FC5619" w:rsidRDefault="00FC5619" w:rsidP="00FC5619" />
-		<p w14:paraId="0DC6722E" w14:textId="77777777" w:rsidR="00E1214E" w:rsidRDefault="00E1214E" w:rsidP="00FC5619" />
-		<sectPr w:rsidR="00E1214E" w:rsidSect="00E5535F">
+		<tbl>
+			<tblPr>
+				<tblStyle w:val="TableGrid" />
+				<tblW w:w="0" w:type="auto" />
+				<tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1" />
+			</tblPr>
+			<tblGrid>
+				<gridCol w:w="4505" />
+				<gridCol w:w="4505" />
+			</tblGrid>
+			<tr w:rsidR="00585340" w14:paraId="687682B6" w14:textId="77777777" w:rsidTr="00585340">
+				<tc>
+					<tcPr>
+						<tcW w:w="4505" w:type="dxa" />
+					</tcPr>
+					<p w14:paraId="55CC065D" w14:textId="77777777" w:rsidR="00585340" w:rsidRDefault="00585340" w:rsidP="00FC5619" />
+				</tc>
+				<tc>
+					<tcPr>
+						<tcW w:w="4505" w:type="dxa" />
+					</tcPr>
+					<p w14:paraId="0F1D0C88" w14:textId="77777777" w:rsidR="00585340" w:rsidRDefault="00585340" w:rsidP="00FC5619" />
+				</tc>
+			</tr>
+		</tbl>
+		<p w14:paraId="0DC6722E" w14:textId="73C6022E" w:rsidR="00E1214E" w:rsidRDefault="00E1214E" w:rsidP="00FC5619" />
+		<p w14:paraId="0E4EA729" w14:textId="77777777" w:rsidR="00585340" w:rsidRDefault="00585340" w:rsidP="00FC5619" />
+		<sectPr w:rsidR="00585340" w:rsidSect="00E5535F">
 			<pgSz w:w="11900" w:h="16840" />
 			<pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0" />
 			<cols w:space="708" />

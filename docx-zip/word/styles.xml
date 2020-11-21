@@ -454,4 +454,20 @@
 			<szCs w:val="32" />
 		</rPr>
 	</style>
+	<style w:type="table" w:styleId="TableGrid">
+		<name w:val="Table Grid" />
+		<basedOn w:val="TableNormal" />
+		<uiPriority w:val="39" />
+		<rsid w:val="00585340" />
+		<tblPr>
+			<tblBorders>
+				<top w:val="single" w:sz="4" w:space="0" w:color="auto" />
+				<left w:val="single" w:sz="4" w:space="0" w:color="auto" />
+				<bottom w:val="single" w:sz="4" w:space="0" w:color="auto" />
+				<right w:val="single" w:sz="4" w:space="0" w:color="auto" />
+				<insideH w:val="single" w:sz="4" w:space="0" w:color="auto" />
+				<insideV w:val="single" w:sz="4" w:space="0" w:color="auto" />
+			</tblBorders>
+		</tblPr>
+	</style>
 </styles>

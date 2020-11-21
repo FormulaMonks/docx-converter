@@ -9,6 +9,19 @@
 - `<b />` & `<bCs />`: both were added when I set some text to be bold
 - `<proofErr>`: warnings about grammar issues and similar
 - `<t xml:space="preserve">`: part of the XML spec that defines that spaces around the content must be preserved (not trimmed)
+- `<tbl>`: table
+    - `<tr>`: table row
+    - `<tc>`: table column
+
+### styles.xml
+
+- `<tblBorders>`: table borders
+    - `<top>`: 
+    - `<left>`: 
+    - `<bottom>`: 
+    - `<right>`: 
+    - `<insideH>`: 
+    - `<insideV>`: 
 
 ### settings.xml
 
