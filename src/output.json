@@ -1,0 +1,278 @@
+{
+  "document": {
+    "$": {
+      "xmlns:wpc": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+      "xmlns:cx": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+      "xmlns:cx1": "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex",
+      "xmlns:cx2": "http://schemas.microsoft.com/office/drawing/2015/10/21/chartex",
+      "xmlns:cx3": "http://schemas.microsoft.com/office/drawing/2016/5/9/chartex",
+      "xmlns:cx4": "http://schemas.microsoft.com/office/drawing/2016/5/10/chartex",
+      "xmlns:cx5": "http://schemas.microsoft.com/office/drawing/2016/5/11/chartex",
+      "xmlns:cx6": "http://schemas.microsoft.com/office/drawing/2016/5/12/chartex",
+      "xmlns:cx7": "http://schemas.microsoft.com/office/drawing/2016/5/13/chartex",
+      "xmlns:cx8": "http://schemas.microsoft.com/office/drawing/2016/5/14/chartex",
+      "xmlns:mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+      "xmlns:aink": "http://schemas.microsoft.com/office/drawing/2016/ink",
+      "xmlns:am3d": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+      "xmlns:o": "urn:schemas-microsoft-com:office:office",
+      "xmlns:r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+      "xmlns:m": "http://schemas.openxmlformats.org/officeDocument/2006/math",
+      "xmlns:v": "urn:schemas-microsoft-com:vml",
+      "xmlns:wp14": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+      "xmlns:wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+      "xmlns:w10": "urn:schemas-microsoft-com:office:word",
+      "xmlns:w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
+      "xmlns:w14": "http://schemas.microsoft.com/office/word/2010/wordml",
+      "xmlns:w15": "http://schemas.microsoft.com/office/word/2012/wordml",
+      "xmlns:w16cex": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+      "xmlns:w16cid": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+      "xmlns:w16": "http://schemas.microsoft.com/office/word/2018/wordml",
+      "xmlns:w16se": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+      "xmlns:wpg": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
+      "xmlns:wpi": "http://schemas.microsoft.com/office/word/2010/wordprocessingInk",
+      "xmlns:wne": "http://schemas.microsoft.com/office/word/2006/wordml",
+      "xmlns:wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+      "mc:Ignorable": "w14 w15 w16se w16cid w16 w16cex wp14"
+    },
+    "body": [
+      {
+        "p": [
+          {
+            "$": {
+              "w14:paraId": "701ADE59",
+              "w14:textId": "77777777",
+              "w:rsidR": "00FC5619",
+              "w:rsidRDefault": "00FC5619",
+              "w:rsidP": "00FC5619"
+            },
+            "pPr": [{ "pStyle": [{ "$": { "w:val": "Heading1" } }] }],
+            "r": [
+              {
+                "t": [
+                  "\r\n\t\t\t\t\tThis is my beautiful, main, header\r\n\t\t\t\t"
+                ]
+              }
+            ]
+          },
+          {
+            "$": {
+              "w14:paraId": "51D0FF61",
+              "w14:textId": "0307F7D4",
+              "w:rsidR": "00FC5619",
+              "w:rsidRPr": "00FC5619",
+              "w:rsidRDefault": "00FC5619",
+              "w:rsidP": "00FC5619"
+            },
+            "pPr": [{ "rPr": [{ "lang": [{ "$": { "w:val": "en-US" } }] }] }],
+            "r": [
+              {
+                "t": [
+                  "\r\n\t\t\t\t\tIn our logging system every running copy of the receiver program will get the messages. That way we'll be able to run one receiver and direct the logs to disk; and at the same time we'll be able to run another receiver and see the logs on the screen\r\n\t\t\t\t"
+                ]
+              },
+              {
+                "$": { "w:rsidRPr": "00FC5619" },
+                "rPr": [{ "lang": [{ "$": { "w:val": "en-US" } }] }],
+                "t": ["\r\n\t\t\t\t\t.\r\n\t\t\t\t"]
+              }
+            ]
+          },
+          {
+            "$": {
+              "w14:paraId": "62EB96E0",
+              "w14:textId": "77777777",
+              "w:rsidR": "00FC5619",
+              "w:rsidRDefault": "00FC5619",
+              "w:rsidP": "00FC5619"
+            },
+            "r": [
+              {
+                "t": [
+                  {
+                    "_": "\r\n\t\t\t\t\tEssentially, published\r\n\t\t\t\t",
+                    "$": { "xml:space": "preserve" }
+                  }
+                ]
+              },
+              {
+                "$": { "w:rsidRPr": "00FD42F4" },
+                "rPr": [{ "b": [""], "bCs": [""] }],
+                "t": ["\r\n\t\t\t\t\tlog messages\r\n\t\t\t\t"]
+              },
+              {
+                "t": [
+                  {
+                    "_": "\r\n\t\t\t\t\tare going to be broadcast to all the receivers.\r\n\t\t\t\t",
+                    "$": { "xml:space": "preserve" }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "$": {
+              "w14:paraId": "6312CA66",
+              "w14:textId": "46D252FC",
+              "w:rsidR": "00FC5619",
+              "w:rsidRDefault": "00FC5619",
+              "w:rsidP": "00FC5619"
+            }
+          },
+          {
+            "$": {
+              "w14:paraId": "0E4EA729",
+              "w14:textId": "6AAE51DD",
+              "w:rsidR": "00585340",
+              "w:rsidRDefault": "00585340",
+              "w:rsidP": "00FC5619"
+            },
+            "pPr": [{ "rPr": [{ "lang": [{ "$": { "w:val": "pt-BR" } }] }] }]
+          },
+          {
+            "$": {
+              "w14:paraId": "3C8778D5",
+              "w14:textId": "744CC728",
+              "w:rsidR": "00E67738",
+              "w:rsidRDefault": "00E67738",
+              "w:rsidP": "00FC5619"
+            },
+            "pPr": [{ "rPr": [{ "lang": [{ "$": { "w:val": "pt-BR" } }] }] }],
+            "r": [
+              {
+                "rPr": [{ "lang": [{ "$": { "w:val": "pt-BR" } }] }],
+                "t": ["\r\n\t\t\t\t\tWhat about now?\r\n\t\t\t\t"]
+              }
+            ]
+          },
+          {
+            "$": {
+              "w14:paraId": "3DB38172",
+              "w14:textId": "2A79C729",
+              "w:rsidR": "00C62D75",
+              "w:rsidRDefault": "00C62D75",
+              "w:rsidP": "00FC5619"
+            },
+            "pPr": [{ "rPr": [{ "lang": [{ "$": { "w:val": "pt-BR" } }] }] }]
+          },
+          {
+            "$": {
+              "w14:paraId": "1CDA3415",
+              "w14:textId": "27065817",
+              "w:rsidR": "00C62D75",
+              "w:rsidRPr": "00E67738",
+              "w:rsidRDefault": "00C62D75",
+              "w:rsidP": "00FC5619"
+            },
+            "pPr": [{ "rPr": [{ "lang": [{ "$": { "w:val": "pt-BR" } }] }] }],
+            "r": [
+              {
+                "rPr": [{ "lang": [{ "$": { "w:val": "pt-BR" } }] }],
+                "t": ["\r\n\t\t\t\t\tAnd now?\r\n\t\t\t\t"]
+              }
+            ]
+          }
+        ],
+        "tbl": [
+          {
+            "tblPr": [
+              {
+                "tblStyle": [{ "$": { "w:val": "TableGrid" } }],
+                "tblW": [{ "$": { "w:w": "0", "w:type": "auto" } }],
+                "tblLook": [
+                  {
+                    "$": {
+                      "w:val": "04A0",
+                      "w:firstRow": "1",
+                      "w:lastRow": "0",
+                      "w:firstColumn": "1",
+                      "w:lastColumn": "0",
+                      "w:noHBand": "0",
+                      "w:noVBand": "1"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tblGrid": [
+              {
+                "gridCol": [
+                  { "$": { "w:w": "4505" } },
+                  { "$": { "w:w": "4505" } }
+                ]
+              }
+            ],
+            "tr": [
+              {
+                "$": {
+                  "w:rsidR": "00585340",
+                  "w14:paraId": "687682B6",
+                  "w14:textId": "77777777",
+                  "w:rsidTr": "00585340"
+                },
+                "tc": [
+                  {
+                    "tcPr": [
+                      { "tcW": [{ "$": { "w:w": "4505", "w:type": "dxa" } }] }
+                    ],
+                    "p": [
+                      {
+                        "$": {
+                          "w14:paraId": "55CC065D",
+                          "w14:textId": "77777777",
+                          "w:rsidR": "00585340",
+                          "w:rsidRDefault": "00585340",
+                          "w:rsidP": "00FC5619"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "tcPr": [
+                      { "tcW": [{ "$": { "w:w": "4505", "w:type": "dxa" } }] }
+                    ],
+                    "p": [
+                      {
+                        "$": {
+                          "w14:paraId": "0F1D0C88",
+                          "w14:textId": "77777777",
+                          "w:rsidR": "00585340",
+                          "w:rsidRDefault": "00585340",
+                          "w:rsidP": "00FC5619"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "sectPr": [
+          {
+            "$": {
+              "w:rsidR": "00C62D75",
+              "w:rsidRPr": "00E67738",
+              "w:rsidSect": "00E5535F"
+            },
+            "pgSz": [{ "$": { "w:w": "11900", "w:h": "16840" } }],
+            "pgMar": [
+              {
+                "$": {
+                  "w:top": "1440",
+                  "w:right": "1440",
+                  "w:bottom": "1440",
+                  "w:left": "1440",
+                  "w:header": "708",
+                  "w:footer": "708",
+                  "w:gutter": "0"
+                }
+              }
+            ],
+            "cols": [{ "$": { "w:space": "708" } }],
+            "docGrid": [{ "$": { "w:linePitch": "360" } }]
+          }
+        ]
+      }
+    ]
+  }
+}
