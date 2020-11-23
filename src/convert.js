@@ -37,6 +37,15 @@ fs.readFile(documentFile, (err, data) => {
     if (nodeType === "t") {
       appendText = true;
     }
+
+    if (nodeType === "pStyle") {
+      const attributes = getAttributes(tag);
+      const styleType = attributes.find((attr) => attr.name === "w:val");
+      if (styleType.value === "Heading1") {
+        const parent = stack[stack.length - 1];
+        parent.type = "h1";
+      }
+    }
   });
 
   parser.on("text", (text) => {
@@ -73,12 +82,20 @@ function convertToHTML(element) {
 }
 
 function getTagName(tagName) {
-  switch(tagName) {
-    case 'tbl':
-      return 'table';
-    case 'tc':
-      return 'td';
+  switch (tagName) {
+    case "tbl":
+      return "table";
+    case "tc":
+      return "td";
     default:
       return tagName;
   }
+}
+
+function getAttributes(tag) {
+  const attributes = tag.attrs.trim().split(" ");
+  return attributes.map((attribute) => {
+    const [name, value] = attribute.split("=");
+    return { name, value: value.substring(1, value.length - 1) };
+  });
 }
