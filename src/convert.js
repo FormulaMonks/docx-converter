@@ -4,19 +4,23 @@ const Saxophone = require("saxophone");
 const parser = new Saxophone();
 
 const documentFile = __dirname + "/../docx-xml-content/word/document.xml";
-const htmlFile = __dirname + "/../docx-xml-content/word/document.html";
+const htmlFile = __dirname + "/../converted/document.html";
 
+// the DOM representation
 const dom = {
   children: [],
   type: "html",
 };
+
+// helper variables
 const counter = 1;
 const flatDom = {};
 const stack = [dom];
 let appendText = false;
-
+let bold = false;
 const knownNodeTypes = ["document", "body", "p", "tbl", "tr", "tc"];
 
+// parsing and mapping an XML to an HTML file
 fs.readFile(documentFile, (err, data) => {
   if (err) throw err;
 
@@ -32,28 +36,41 @@ fs.readFile(documentFile, (err, data) => {
       const parent = stack[stack.length - 1];
       parent.children.push(newNode);
       stack.push(newNode);
-    }
-
-    if (nodeType === "t") {
+    } else if (nodeType === "b") {
+      bold = true;
+      const newNode = {
+        type: "strong",
+        children: [],
+      };
+      flatDom[`node${counter}`] = newNode;
+      const parent = stack[stack.length - 1];
+      parent.children.push(newNode);
+      stack.push(newNode);
+    } else if (nodeType === "t") {
       appendText = true;
-    }
-
-    if (nodeType === "pStyle") {
+    } else if (nodeType === "pStyle") {
       const attributes = getAttributes(tag);
       const styleType = attributes.find((attr) => attr.name === "w:val");
       if (styleType.value === "Heading1") {
         const parent = stack[stack.length - 1];
         parent.type = "h1";
       }
+    } else {
+      console.log("unkown tag: " + nodeType);
     }
   });
 
   parser.on("text", (text) => {
     if (appendText) {
-      const content = text.contents.trim();
+      const content = text.contents;
       const parent = stack[stack.length - 1];
-      parent.content = (parent.content || "") + content;
+      parent.children.push(content);
       appendText = false;
+
+      if (bold) {
+        stack.pop();
+        bold = false;
+      }
     }
   });
 
@@ -76,6 +93,12 @@ fs.readFile(documentFile, (err, data) => {
 });
 
 function convertToHTML(element) {
+  if (typeof element === "string") {
+    return element;
+  }
+  if (element.type === "document") {
+    return element.children.map(convertToHTML).join("");
+  }
   return `<${element.type}>${element.children.map(convertToHTML).join("")}${
     element.content || ""
   }</${element.type}>`;
@@ -87,6 +110,8 @@ function getTagName(tagName) {
       return "table";
     case "tc":
       return "td";
+    case "b":
+      return "strong";
     default:
       return tagName;
   }
