@@ -12,6 +12,15 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/src/convert.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "convert-style",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/convert-style.js"
         }
     ]
 }

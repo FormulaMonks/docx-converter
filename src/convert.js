@@ -18,7 +18,7 @@ const flatDom = {};
 const stack = [dom];
 let appendText = false;
 let bold = false;
-const knownNodeTypes = ["document", "body", "p", "tbl", "tr", "tc"];
+const knownNodeTypes = ["document", "body", "p", "tbl", "tr", "tc", "b"];
 
 // parsing and mapping an XML to an HTML file
 fs.readFile(documentFile, (err, data) => {
@@ -36,16 +36,8 @@ fs.readFile(documentFile, (err, data) => {
       const parent = stack[stack.length - 1];
       parent.children.push(newNode);
       stack.push(newNode);
-    } else if (nodeType === "b") {
-      bold = true;
-      const newNode = {
-        type: "strong",
-        children: [],
-      };
-      flatDom[`node${counter}`] = newNode;
-      const parent = stack[stack.length - 1];
-      parent.children.push(newNode);
-      stack.push(newNode);
+
+      if (nodeType === "b") bold = true;
     } else if (nodeType === "t") {
       appendText = true;
     } else if (nodeType === "pStyle") {
@@ -54,6 +46,7 @@ fs.readFile(documentFile, (err, data) => {
       if (styleType.value === "Heading1") {
         const parent = stack[stack.length - 1];
         parent.type = "h1";
+        parent.class = styleType.value;
       }
     } else {
       console.log("unkown tag: " + nodeType);
@@ -99,9 +92,11 @@ function convertToHTML(element) {
   if (element.type === "document") {
     return element.children.map(convertToHTML).join("");
   }
-  return `<${element.type}>${element.children.map(convertToHTML).join("")}${
-    element.content || ""
-  }</${element.type}>`;
+  return `<${element.type}${
+    element.class ? ` class="${element.class}"` : ""
+  }>${element.children.map(convertToHTML).join("")}${element.content || ""}</${
+    element.type
+  }>`;
 }
 
 function getTagName(tagName) {

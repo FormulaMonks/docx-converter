@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "convert": "node src/convert.js",
+    "convert-style": "node src/convert-style.js",
     "unzip": "node src/unzip-docx.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.20",
     "saxophone": "^0.6.1",
     "unzipper": "^0.10.11",
     "xml2js": "^0.4.23"
