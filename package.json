@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "saxophone": "^0.6.1",
     "unzipper": "^0.10.11",
     "xml2js": "^0.4.23"
   }
