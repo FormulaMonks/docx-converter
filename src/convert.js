@@ -4,9 +4,11 @@ const Saxophone = require("saxophone");
 const parser = new Saxophone();
 
 const documentFile = __dirname + "/../docx-xml-content/word/document.xml";
+const htmlFile = __dirname + "/../docx-xml-content/word/document.html";
 
 const dom = {
   children: [],
+  type: "html",
 };
 const counter = 1;
 const flatDom = {};
@@ -23,7 +25,7 @@ fs.readFile(documentFile, (err, data) => {
 
     if (knownNodeTypes.includes(nodeType)) {
       const newNode = {
-        type: nodeType,
+        type: getTagName(nodeType),
         children: [],
       };
       flatDom[`node${counter}`] = newNode;
@@ -55,4 +57,28 @@ fs.readFile(documentFile, (err, data) => {
   });
 
   parser.parse(data);
+
+  const htmlContent = convertToHTML(dom);
+  console.log(htmlContent);
+
+  fs.writeFile(htmlFile, htmlContent, "UTF-8", (err) => {
+    if (err) throw err;
+  });
 });
+
+function convertToHTML(element) {
+  return `<${element.type}>${element.children.map(convertToHTML).join("")}${
+    element.content || ""
+  }</${element.type}>`;
+}
+
+function getTagName(tagName) {
+  switch(tagName) {
+    case 'tbl':
+      return 'table';
+    case 'tc':
+      return 'td';
+    default:
+      return tagName;
+  }
+}
