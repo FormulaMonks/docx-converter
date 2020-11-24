@@ -143,11 +143,18 @@
                     },
                     {
                       "type": "td",
-                      "children": [{ "type": "p", "children": [] }]
+                      "children": [{ "type": "p", "children": ["Home Phone:"] }]
                     },
                     {
                       "type": "td",
-                      "children": [{ "type": "p", "children": [] }]
+                      "children": [
+                        {
+                          "type": "p",
+                          "children": [
+                            { "type": "code", "children": ["«HomePhone»"] }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
