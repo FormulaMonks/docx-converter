@@ -5,6 +5,7 @@ const parser = new Saxophone();
 
 const documentFile = __dirname + "/../docx-xml-content/word/document.xml";
 const htmlFile = __dirname + "/../converted/document.html";
+const domFile = __dirname + "/../converted/dom.json";
 
 // the DOM representation
 const dom = {
@@ -18,7 +19,8 @@ const flatDom = {};
 const stack = [dom];
 let appendText = false;
 let bold = false;
-const knownNodeTypes = ["document", "body", "p", "tbl", "tr", "tc", "b"];
+const knownNodeTypes = ["document", "body", "p", "tbl", "tr", "tc", "b", "bookmarkStart"];
+let bookmarking = false;
 
 // parsing and mapping an XML to an HTML file
 fs.readFile(documentFile, (err, data) => {
@@ -38,6 +40,7 @@ fs.readFile(documentFile, (err, data) => {
       stack.push(newNode);
 
       if (nodeType === "b") bold = true;
+      if (nodeType === "bookmarkStart") bookmarking = true;
     } else if (nodeType === "t") {
       appendText = true;
     } else if (nodeType === "pStyle") {
@@ -48,8 +51,6 @@ fs.readFile(documentFile, (err, data) => {
         parent.type = "h1";
         parent.class = styleType.value;
       }
-    } else {
-      console.log("unkown tag: " + nodeType);
     }
   });
 
@@ -60,9 +61,10 @@ fs.readFile(documentFile, (err, data) => {
       parent.children.push(content);
       appendText = false;
 
-      if (bold) {
+      if (bold || bookmarking) {
         stack.pop();
         bold = false;
+        bookmarking = false;
       }
     }
   });
@@ -77,10 +79,18 @@ fs.readFile(documentFile, (err, data) => {
 
   parser.parse(data);
 
-  const htmlContent = convertToHTML(dom);
-  console.log(htmlContent);
+  console.log(dom);
 
+  let htmlContent = convertToHTML(dom);
+  htmlContent = htmlContent.replace(
+    "<html>",
+    '<html><head><link rel="stylesheet" href="styles.css"></head>'
+  );
   fs.writeFile(htmlFile, htmlContent, "UTF-8", (err) => {
+    if (err) throw err;
+  });
+
+  fs.writeFile(domFile, JSON.stringify(dom), "UTF-8", (err) => {
     if (err) throw err;
   });
 });
@@ -107,6 +117,8 @@ function getTagName(tagName) {
       return "td";
     case "b":
       return "strong";
+    case "bookmarkStart":
+      return "code";
     default:
       return tagName;
   }
