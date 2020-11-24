@@ -28,66 +28,132 @@
               ]
             },
             {
-              "type": "p",
+              "type": "table",
               "children": [
                 {
-                  "type": "table",
+                  "type": "tr",
                   "children": [
                     {
-                      "type": "tr",
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["First cell"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["Second cell"] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["Third cell"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["Fouth cell"] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["Fifth"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["Sixth"] }]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "p",
+              "children": [
+                "Let’s create a form below to represent",
+                " a real-word scenario."
+              ]
+            },
+            { "type": "p", "children": ["This is the form header (h2)"] },
+            {
+              "type": "table",
+              "children": [
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["First Name:"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["«FirstName»"] }]
+                    },
+                    {
+                      "type": "td",
                       "children": [
-                        {
-                          "type": "td",
-                          "children": [
-                            { "type": "p", "children": ["First cell"] }
-                          ]
-                        },
-                        {
-                          "type": "td",
-                          "children": [
-                            { "type": "p", "children": ["Second cell"] }
-                          ]
-                        }
+                        { "type": "p", "children": ["Political view:"] }
                       ]
                     },
                     {
-                      "type": "tr",
+                      "type": "td",
                       "children": [
-                        {
-                          "type": "td",
-                          "children": [
-                            { "type": "p", "children": ["Third cell"] }
-                          ]
-                        },
-                        {
-                          "type": "td",
-                          "children": [
-                            { "type": "p", "children": ["Fouth cell"] }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "tr",
-                      "children": [
-                        {
-                          "type": "td",
-                          "children": [{ "type": "p", "children": ["Fifth"] }]
-                        },
-                        {
-                          "type": "td",
-                          "children": [{ "type": "p", "children": ["Sixth"] }]
-                        }
+                        { "type": "p", "children": ["«PoliticalView»"] }
                       ]
                     }
                   ]
                 },
-                { "type": "p", "children": [] },
-                { "type": "p", "children": ["What about now?"] },
-                { "type": "p", "children": [] },
-                { "type": "p", "children": ["And now?"] }
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["Last Name:"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["«LastName»"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": [] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": [] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tr",
+                  "children": [
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["Job Title:"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": ["«JobTitle»"] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": [] }]
+                    },
+                    {
+                      "type": "td",
+                      "children": [{ "type": "p", "children": [] }]
+                    }
+                  ]
+                }
               ]
-            }
+            },
+            { "type": "p", "children": ["We are good to go now."] },
+            { "type": "p", "children": ["Regards,"] },
+            { "type": "p", "children": ["Tirulipa"] }
           ]
         }
       ]
