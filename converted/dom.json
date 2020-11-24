@@ -78,7 +78,11 @@
                 " a real-word scenario."
               ]
             },
-            { "type": "p", "children": ["This is the form header (h2)"] },
+            {
+              "type": "h2",
+              "children": ["This is the form header (h2)"],
+              "class": "Heading2"
+            },
             {
               "type": "table",
               "children": [
@@ -91,7 +95,14 @@
                     },
                     {
                       "type": "td",
-                      "children": [{ "type": "p", "children": ["«FirstName»"] }]
+                      "children": [
+                        {
+                          "type": "p",
+                          "children": [
+                            { "type": "code", "children": ["«FirstName»"] }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "td",
@@ -102,7 +113,12 @@
                     {
                       "type": "td",
                       "children": [
-                        { "type": "p", "children": ["«PoliticalView»"] }
+                        {
+                          "type": "p",
+                          "children": [
+                            { "type": "code", "children": ["«PoliticalView»"] }
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -116,7 +132,14 @@
                     },
                     {
                       "type": "td",
-                      "children": [{ "type": "p", "children": ["«LastName»"] }]
+                      "children": [
+                        {
+                          "type": "p",
+                          "children": [
+                            { "type": "code", "children": ["«LastName»"] }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "td",
@@ -137,7 +160,14 @@
                     },
                     {
                       "type": "td",
-                      "children": [{ "type": "p", "children": ["«JobTitle»"] }]
+                      "children": [
+                        {
+                          "type": "p",
+                          "children": [
+                            { "type": "code", "children": ["«JobTitle»"] }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "td",

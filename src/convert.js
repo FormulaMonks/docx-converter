@@ -19,8 +19,9 @@ const flatDom = {};
 const stack = [dom];
 let appendText = false;
 let bold = false;
-const knownNodeTypes = ["document", "body", "p", "tbl", "tr", "tc", "b", "bookmarkStart"];
+const knownNodeTypes = ["document", "body", "p", "tbl", "tr", "tc", "b", "bookmarkStart", "instrText"];
 let bookmarking = false;
+let mergeField = false;
 
 // parsing and mapping an XML to an HTML file
 fs.readFile(documentFile, (err, data) => {
@@ -41,12 +42,25 @@ fs.readFile(documentFile, (err, data) => {
 
       if (nodeType === "b") bold = true;
       if (nodeType === "bookmarkStart") bookmarking = true;
+      if (nodeType === "instrText") mergeField = true;
     } else if (nodeType === "t") {
       appendText = true;
     } else if (nodeType === "pStyle") {
       const attributes = getAttributes(tag);
       const styleType = attributes.find((attr) => attr.name === "w:val");
       if (styleType.value === "Heading1") {
+        const parent = stack[stack.length - 1];
+        parent.type = "h1";
+        parent.class = styleType.value;
+      } else if (styleType.value === "Heading2") {
+        const parent = stack[stack.length - 1];
+        parent.type = "h2";
+        parent.class = styleType.value;
+      } else if (styleType.value === "Heading3") {
+        const parent = stack[stack.length - 1];
+        parent.type = "h3";
+        parent.class = styleType.value;
+      } else if (styleType.value === "Heading4") {
         const parent = stack[stack.length - 1];
         parent.type = "h1";
         parent.class = styleType.value;
@@ -61,10 +75,11 @@ fs.readFile(documentFile, (err, data) => {
       parent.children.push(content);
       appendText = false;
 
-      if (bold || bookmarking) {
+      if (bold || bookmarking || mergeField) {
         stack.pop();
         bold = false;
         bookmarking = false;
+        mergeField = false;
       }
     }
   });
@@ -72,7 +87,7 @@ fs.readFile(documentFile, (err, data) => {
   parser.on("tagclose", (tag) => {
     const nodeType = tag.name.replace("w:", "");
 
-    if (knownNodeTypes.includes(nodeType)) {
+    if (knownNodeTypes.includes(nodeType) && !mergeField) {
       stack.pop();
     }
   });
@@ -84,7 +99,7 @@ fs.readFile(documentFile, (err, data) => {
   let htmlContent = convertToHTML(dom);
   htmlContent = htmlContent.replace(
     "<html>",
-    '<html><head><link rel="stylesheet" href="styles.css"></head>'
+    '<html><head><link rel="stylesheet" href="default-styles.css"><link rel="stylesheet" href="styles.css"></head>'
   );
   fs.writeFile(htmlFile, htmlContent, "UTF-8", (err) => {
     if (err) throw err;
@@ -118,6 +133,7 @@ function getTagName(tagName) {
     case "b":
       return "strong";
     case "bookmarkStart":
+    case "instrText":
       return "code";
     default:
       return tagName;
