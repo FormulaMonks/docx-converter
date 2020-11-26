@@ -178,11 +178,18 @@
                     },
                     {
                       "type": "td",
-                      "children": [{ "type": "p", "children": [] }]
+                      "children": [{ "type": "p", "children": ["Work Phone"] }]
                     },
                     {
                       "type": "td",
-                      "children": [{ "type": "p", "children": [] }]
+                      "children": [
+                        {
+                          "type": "p",
+                          "children": [
+                            { "type": "code", "children": ["«WorkPhone»"] }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
