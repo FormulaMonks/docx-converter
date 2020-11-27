@@ -8,8 +8,7 @@ async function convert(docxBuffer, opts) {
   const document = await readFile(extractedFiles.document);
   const dom = await parseDocument(document);
   const html = render(dom);
-  const path = "/tmp/html-output/";
-  await writeFile(path, "index.html", html);
+  await writeFile("/tmp/html-output/", "index.html", html);
 }
 
 module.exports = {
