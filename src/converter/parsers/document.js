@@ -1,51 +1,21 @@
 const Saxophone = require("saxophone");
-const { convertToNode } = require("./tag");
-
-const knownTags = [
-  "w:document",
-  "w:body",
-  "w:p",
-  "w:tbl",
-  "w:tr",
-  "w:tc",
-  "w:b",
-  "w:bookmarkStart",
-  "w:instrText",
-];
+const { DomBuilder } = require("./dom-builder");
 
 /**
- * Parse a document.xml content and generate a DOM/JSON structure.
+ * Parses a document.xml content and generates a DOM/JSON structure.
  *
  * @param {string} document content.
  * @return {Dom} dom.
  */
 function parseDocument(documentContent) {
   return new Promise((res) => {
-    const dom = convertToNode({ name: "html" });
-    const stack = [dom];
     const parser = new Saxophone();
+    const domBuilder = new DomBuilder();
 
-    parser.on("tagopen", (tag) => {
-      // Unkown tags can be ignored (i.e., not added to the dom).
-      // But their children might get added, if they are known/useful.
-      if (!knownTags.includes(tag.name)) return;
-
-      const newNode = convertToNode(tag);
-      const parent = stack[stack.length - 1];
-      parent.children.push(newNode);
-      stack.push(newNode);
-    });
-
-    parser.on("text", (text) => {});
-
-    parser.on("tagclose", (tag) => {
-      if (!knownTags.includes(tag.name)) return;
-      stack.pop();
-    });
-
-    parser.on("finish", () => {
-      res(dom);
-    });
+    parser.on("tagopen", domBuilder.openTag);
+    parser.on("text", domBuilder.appendText);
+    parser.on("tagclose", domBuilder.closeTag);
+    parser.on("finish", () => res(domBuilder.getDom()));
 
     parser.parse(documentContent);
   });
