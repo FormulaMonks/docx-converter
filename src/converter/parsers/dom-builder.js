@@ -7,7 +7,6 @@ const knownTags = [
   "w:tbl",
   "w:tr",
   "w:tc",
-  "w:bookmarkStart",
   "w:instrText",
 ];
 
@@ -27,6 +26,8 @@ class DomBuilder {
   openTag(tag) {
     // triggering, if needed, helper flags
     if (tag.name === "w:t") this.isTextExpected = true;
+    if (tag.name === "w:bookmarkStart") this.openBookmark();
+    if (tag.name === "w:bookmarkEnd") this.closeBookmark();
     if (tag.name === "w:b") this.addBoldOnLevel = this.stack.length;
 
     // Unkown tags can be ignored (i.e., not added to the dom).
@@ -34,10 +35,7 @@ class DomBuilder {
     if (!knownTags.includes(tag.name)) return;
 
     // appending new, expected node to DOM
-    const newNode = convertToNode(tag);
-    const parent = this.stack[this.stack.length - 1];
-    parent.children.push(newNode);
-    this.stack.push(newNode);
+    this.convertTagAndAppend(tag);
   }
 
   appendText(text) {
@@ -45,12 +43,7 @@ class DomBuilder {
     if (!this.isTextExpected) return;
 
     // if bold is in action, add <strong> to stack/dom
-    if (this.addBoldOnLevel) {
-      const newNode = convertToNode({ name: "b" });
-      const parent = this.stack[this.stack.length - 1];
-      parent.children.push(newNode);
-      this.stack.push(newNode);
-    }
+    if (this.addBoldOnLevel) this.convertTagAndAppend({ name: "b" });
 
     // append the text to this.stack/dom
     this.isTextExpected = false;
@@ -78,6 +71,27 @@ class DomBuilder {
 
   getDom() {
     return this.dom;
+  }
+
+  convertTagAndAppend(tag) {
+    const newNode = convertToNode(tag);
+    const parent = this.stack[this.stack.length - 1];
+    parent.children.push(newNode);
+    this.stack.push(newNode);
+  }
+
+  openBookmark() {
+    this.convertTagAndAppend({ name: "code" });
+    const parent = this.stack[this.stack.length - 1];
+    parent.children.push("[");
+    this.stack.pop();
+  }
+
+  closeBookmark() {
+    this.convertTagAndAppend({ name: "code" });
+    const parent = this.stack[this.stack.length - 1];
+    parent.children.push("]");
+    this.stack.pop();
   }
 }
 

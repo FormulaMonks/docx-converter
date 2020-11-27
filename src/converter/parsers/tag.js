@@ -6,9 +6,6 @@ function getTagName(tagName) {
       return "td";
     case "b":
       return "strong";
-    case "bookmarkStart":
-    case "instrText":
-      return "code";
     default:
       return tagName;
   }
