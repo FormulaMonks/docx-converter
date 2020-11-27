@@ -15,6 +15,7 @@ class DomBuilder {
   stack = [this.dom];
   isTextExpected = false;
   addBoldOnLevel = null;
+  addMergeFieldOnLevel = null;
 
   constructor() {
     this.openTag = this.openTag.bind(this);
@@ -29,6 +30,8 @@ class DomBuilder {
     if (tag.name === "w:bookmarkStart") this.openBookmark();
     if (tag.name === "w:bookmarkEnd") this.closeBookmark();
     if (tag.name === "w:b") this.addBoldOnLevel = this.stack.length;
+    if (tag.name === "w:instrText")
+      this.addMergeFieldOnLevel = this.stack.length;
 
     // Unkown tags can be ignored (i.e., not added to the dom).
     // But their children might get added, if they are known/useful.
@@ -44,6 +47,7 @@ class DomBuilder {
 
     // if bold is in action, add <strong> to stack/dom
     if (this.addBoldOnLevel) this.convertTagAndAppend({ name: "b" });
+    if (this.addMergeFieldOnLevel) this.convertTagAndAppend({ name: "code" });
 
     // append the text to this.stack/dom
     this.isTextExpected = false;
@@ -56,11 +60,16 @@ class DomBuilder {
       this.addBoldOnLevel = null;
       this.stack.pop();
     }
+    if (this.addMergeFieldOnLevel) {
+      this.addMergeFieldOnLevel = null;
+      this.stack.pop();
+    }
   }
 
   closeTag(tag) {
     // reset flags, if needed
     if (this.stack.length < this.addBoldOnLevel) this.addBoldOnLevel = null;
+    if (this.stack.length < this.addMergeFieldOnLevel) this.addMergeFieldOnLevel = null;
 
     // ignore unkown tags
     if (!knownTags.includes(tag.name)) return;
