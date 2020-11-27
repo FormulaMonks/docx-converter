@@ -15,7 +15,10 @@ async function extract(docxBuffer, opts) {
 
   // extract the docx files
   const zip = await unzipper.Open.buffer(docxBuffer);
-  return zip.extract({ path: extractedDocxPath });
+  await zip.extract({ path: extractedDocxPath });
+  return {
+    document: `${extractedDocxPath}/word/document.xml`,
+  };
 }
 
 module.exports = {
