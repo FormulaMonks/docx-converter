@@ -7,10 +7,10 @@ const { DomBuilder } = require("./dom-builder");
  * @param {string} document content.
  * @return {Dom} dom.
  */
-function parseDocument(documentContent) {
+function parseDocument(documentContent, documentRels) {
   return new Promise((res) => {
     const parser = new Saxophone();
-    const domBuilder = new DomBuilder();
+    const domBuilder = new DomBuilder(documentRels);
 
     parser.on("tagopen", domBuilder.openTag);
     parser.on("text", domBuilder.appendText);

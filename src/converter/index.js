@@ -1,4 +1,5 @@
 const { ensureDir, readFile, writeFile } = require("fs-extra");
+const { parse } = require("./parsers/document-rels");
 const { parseDocument } = require("./parsers/document");
 const { extract } = require("./extractor");
 const { render } = require("./renderer/html");
@@ -7,7 +8,8 @@ const { a4Appearance } = require("./util");
 async function convert(docxBuffer, opts) {
   const extractedFiles = await extract(docxBuffer, opts);
   const document = await readFile(extractedFiles.document);
-  const dom = await parseDocument(document);
+  const documentRels = await parse(extractedFiles.documentRels);
+  const dom = await parseDocument(document, documentRels);
   const html = render(dom);
   const htmlWithA4Appearance = html.replace(
     "<html>",

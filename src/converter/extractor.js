@@ -18,6 +18,7 @@ async function extract(docxBuffer, opts) {
   await zip.extract({ path: extractedDocxPath });
   return {
     document: `${extractedDocxPath}/word/document.xml`,
+    documentRels: `${extractedDocxPath}/word/_rels/document.xml.rels`,
   };
 }
 
